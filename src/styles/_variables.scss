@@ -1,0 +1,103 @@
+@font-face {
+  font-family: 'HelveticaNeue';
+  font-style: normal;
+  font-weight: normal;
+  src:
+    url('/assets/fonts/HelveticaNeue/HelveticaNeueLTW1G-Lt.ttf') format('ttf')
+}
+@font-face {
+  font-family: 'HelveticaNeue-Light';
+  font-style: normal;
+  font-weight: normal;
+  src:
+    url('/assets/fonts/HelveticaNeue/helvetica-neue-light.ttf') format('ttf')
+}
+@font-face {
+  font-family: 'MillerBanner-Light';
+  font-style: normal;
+  font-weight: normal;
+  src:
+    url('/assets/fonts/MillerBanner/Miller-Banner-Light-01.woff2') format('ttf')
+
+}
+
+$primaryFontFamily: "MillerBanner-Light";
+$secondaryFontFamily: "HelveticaNeue-Light";
+
+// colors
+$white: #fff;
+$black: #000;
+$green: #4cc71d;
+$blue: #006cf0;
+$red: #ff7272;
+$mainBg: #ffffff; 
+$dark: #202020;
+$lightDark: #666666;
+$mainBrown: #b69f58;
+
+$primary: $mainBrown;
+$secondary: $blue;
+$error: $red;
+
+$defaultMaxWidth: 375px;
+
+//font sizes
+$mainFont: 15px;
+$secondaryFont: 16px;
+$tableFont: 13px;
+$menuFont: 15px;
+$titleFont: 20px;
+$subTitle: 18px;
+$largeTitle: 42px;
+
+// mixins
+@mixin border-radius($radius) {
+  -webkit-border-radius: $radius;
+  -moz-border-radius: $radius;
+  -ms-border-radius: $radius;
+  border-radius: $radius;
+}
+
+// Small tablets and large smartphones (landscape view)
+$screen-sm-min: 576px;
+
+// Small tablets (portrait view)
+$screen-md-min: 768px;
+
+// Tablets and small desktops
+$screen-lg-min: 992px;
+
+// Large tablets and desktops
+$screen-xl-min: 1200px;
+
+// extra small devices
+@mixin xs {
+  @media (max-width: #{$screen-sm-min}) {
+    @content;
+  }
+}
+// small devices
+@mixin sm {
+  @media (max-width: #{$screen-md-min}) {
+    @content;
+  }
+}
+// medium devices
+@mixin md {
+  @media (max-width: #{$screen-lg-min}) {
+    @content;
+  }
+}
+// large devices
+@mixin lg {
+  @media (max-width: #{$screen-xl-min}) {
+    @content;
+  }
+}
+
+// extra large devices
+@mixin xl {
+  @media (min-width: #{$screen-xl-min}) {
+    @content;
+  }  
+}
